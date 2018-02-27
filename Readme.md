@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Саша Лобова](https://up.htmlacademy.ru/htmlcss/20/user/509175).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Кригер](https://htmlacademy.ru/profile/sergeikriger).
 
 ---
 
