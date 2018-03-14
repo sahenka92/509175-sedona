@@ -69,6 +69,7 @@
             от 0 до 3000
             </label>
           <input class="filter-input" type="range" min="0" max="3000" step="1" value="2500" name="price" id="filter-price">
+          <input class="filter-input" type="range" min="0" max="3000" step="1" value="2500" name="price" id="filter-price">
         </fieldset>
         <a class="filter-show" href="#">Показать</a>
       </form>
@@ -86,8 +87,12 @@
           <li><a class="sorting-by-raiting" href="#">По рейтингу</a></li>
         </ul>
       </div>
-      <a class="sorting-up" href="index.html" aria-label="Сортировка по убыванию"> </a>
-      <a class="sorting-down" href="#" aria-label="Сортировка по возрастанию"> </a>
+      <a class="sorting-up" href="#" title="Сортировка по убыванию">
+       <img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию">
+      </a>
+      <a class="sorting-down" href="#" title="Сортировка по возрастанию">
+        <img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию">
+      </a>
 
       <table class="hotel-list">
 
@@ -110,7 +115,6 @@
           <td><a class="button" href="book_amara_resort.html">Забронировать</a></td>
           <td>Рейтинг: 8,5</td>
         </tr>
-
         <tr>
           <td rowspan="3"><img src="img/desert_quail.jpg" width="135" height="90" alt="Фото Desert Quail INN"></td>
           <td colspan="2"><a href="desert_quail.html">Desert Quail INN</a></td>
@@ -125,12 +129,10 @@
           <td><a class="button" href="book_desert_quail.html">Забронировать</a></td>
           <td>Рейтинг: 8,9</td>
         </tr>
-
         <tr>
           <td rowspan="3"><img src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo"></td>
           <td colspan="2"><a href="villas_at_poco_diablo.html">Villas at Poco Diablo</a></td>
           <td rowspan="2"></td>
-
         </tr>
         <tr>
           <td>Апартаменты</td>
@@ -148,9 +150,21 @@
   <footer class="main-footer">
     <p>#VISITSEDONA</p>
     <ul class="footer-social">
-      <li><a class="social-button" href="#" aria-label="Twitter">Twitter</a></li>
-      <li><a class="social-button" href="#" aria-label="Facebook">Facebook</a></li>
-      <li><a class="social-button" href="#" aria-label="YouTube">YouTube</a></li>
+      <li>
+        <a class="social-button twitter" href="#" title="Twitter">
+          <img src="img/icon-twitter.svg" width="17" height="15" alt="Twitter">
+        </a>
+      </li>
+      <li>
+        <a class="social-button facebook" href="#" title="Facebook">
+          <img src="img/icon-fb.svg" width="17" height="15" alt="Facebook">
+        </a>
+      </li>
+      <li>
+        <a class="social-button youtube" href="#" title="YouTube">
+          <img src="img/icon-youtube.svg" width="17" height="15" alt="YouTube">
+        </a>
+      </li>
     </ul>
     <a class="main-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTMLAcademy">
       Website by
