@@ -22,6 +22,8 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+
+  background-color: #ffffff;
 }
 
 .site-navigation {
@@ -247,12 +249,18 @@ color: #ffffff;
 }
 
 
-.main-header,
-.container,
+.catalog,
 .main-footer,
  {
   background-color: #ffffff;
   box-shadow: 5px 0 15px rgba(0, 1, 1, 0.2);
+}
+
+.main-header,
+.container,
+.main-footer {
+  background-color: #ffffff;
+  box-shadow: 5px 0  15px -10px rgba(0, 1, 1, 0.2);
 }
 
 /* catalog */
