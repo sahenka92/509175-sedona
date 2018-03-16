@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="main-header">
-    <nav class="main-menu">
-      <a class="main-header-logo" href="index.html" aria-label="Седона">
+    <nav class="main-navigation">
+      <a class="main-header-logo" aria-label="Седона">
         <img src="img/logo.png" width="140" height="70" aria-hidden="true" alt="Логотип Седоны">
       </a>
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
         <li><a href="photovideo.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li><a class="hotels" href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -28,10 +30,10 @@
 
     <section class="filters">
       <h2 class="visualy-hidden">Фильтр отелей</h2>
-      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+      <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Инфраструктура:</legend>
-          <ul>
+          <ul class="filter-list">
             <li class="filter-option">
               <label for="filter-pool">Бассейн</label>
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
@@ -48,7 +50,7 @@
         </fieldset>
         <fieldset>
           <legend>Тип жилья:</legend>
-          <ul>
+          <ul class="filter-list">
             <li class="filter-option">
               <label for="filter-hotel">Гостиница</label>
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
@@ -71,7 +73,7 @@
           <input class="filter-input" type="range" min="0" max="3000" step="1" value="2500" name="price" id="filter-price">
           <input class="filter-input" type="range" min="0" max="3000" step="1" value="2500" name="price" id="filter-price">
         </fieldset>
-        <button class="button" type="submit">Показать</button>
+        <button class="filter-show" type="submit">Показать</button>
       </form>
     </section>
 
@@ -103,38 +105,38 @@
         </tr>
         <tr>
           <td rowspan="3"><img src="img/amara_resort.jpg" width="135" height="90" alt="Фото Amara resort&spa"></td>
-          <td colspan="2"><a href="amara_resort.html">Amara resort & spa</a></td>
-          <td rowspan="2"></td>
+          <td class="hotel-name" colspan="2"><a href="amara_resort.html">Amara resort & spa</a></td>
+          <td class="hotel-stars" rowspan="2"></td>
         </tr>
         <tr>
           <td>Гостиница</td>
           <td>от 4000 р.</td>
         </tr>
         <tr>
-          <td><a class="button" href="amara_resort.html">Подробнее</a></td>
-          <td><a class="button" href="book_amara_resort.html">Забронировать</a></td>
-          <td>Рейтинг: 8,5</td>
+          <td><a class="button button-more" href="amara_resort.html">Подробнее</a></td>
+          <td><a class="button button-book" href="book_amara_resort.html">Забронировать</a></td>
+          <td class="hotel-raiting">Рейтинг: 8,5</td>
         </tr>
 
         <tr>
           <td rowspan="3"><img src="img/desert_quail.jpg" width="135" height="90" alt="Фото Desert Quail INN"></td>
-          <td colspan="2"><a href="desert_quail.html">Desert Quail INN</a></td>
-          <td rowspan="2"></td>
+          <td class="hotel-name" colspan="2"><a href="desert_quail.html">Desert Quail INN</a></td>
+          <td class="hotel-stars" rowspan="2"></td>
         </tr>
         <tr>
           <td>Мотель</td>
           <td>от 3000 р.</td>
         </tr>
         <tr>
-          <td><a class="button" href="desert_quail.html">Подробнее</a></td>
-          <td><a class="button" href="book_desert_quail.html">Забронировать</a></td>
-          <td>Рейтинг: 8,9</td>
+          <td><a class="button button-more" href="desert_quail.html">Подробнее</a></td>
+          <td><a class="button button-book" href="book_desert_quail.html">Забронировать</a></td>
+          <td class="hotel-raiting">Рейтинг: 8,9</td>
         </tr>
 
         <tr>
           <td rowspan="3"><img src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo"></td>
-          <td colspan="2"><a href="villas_at_poco_diablo.html">Villas at Poco Diablo</a></td>
-          <td rowspan="2"></td>
+          <td class="hotel-name" colspan="2"><a href="villas_at_poco_diablo.html">Villas at Poco Diablo</a></td>
+          <td class="hotel-stars" rowspan="2"></td>
 
         </tr>
         <tr>
@@ -142,9 +144,9 @@
           <td>от 2000 р.</td>
         </tr>
         <tr>
-          <td><a class="button" href="villas_at_poco_diablo.html">Подробнее</a></td>
-          <td><a class="button" href="book_villas_at_poco_diablo.html">Забронировать</a></td>
-          <td>Рейтинг: 9,2</td>
+          <td><a class="button button-more" href="villas_at_poco_diablo.html">Подробнее</a></td>
+          <td><a class="button button-book" href="book_villas_at_poco_diablo.html">Забронировать</a></td>
+          <td class="hotel-raiting">Рейтинг: 9,2</td>
         </tr>
       </table>
     </section>
