@@ -55,8 +55,8 @@ a {
 
   background-color: #3b534b;
   background:
-  url("img/shape1.png"),
-  url("img/mountains.jpg");
+  url("../img/shape1.png"),
+  url("../img/mountains.jpg");
   background-repeat:
   no-repeat;
   background-size:
@@ -67,8 +67,9 @@ a {
   top center;
 }
 
-.intro b {
+b.intro-tagline {
   font-size: 21px;
+  font-weight: 700;
 }
 
 .features-list,
@@ -88,11 +89,13 @@ a {
   color: #000000;
 }
 
-.feature-item-special {
+.line-feature-item {
   color: #ffffff;
+
+  background-color: #81b3d2;
 }
 
-.feature-item-special h2 {
+.line-feature-item h2 {
   font-weight: 700;
   color: #ffffff;
 }
@@ -108,23 +111,21 @@ a {
   background-color:#ffffff;
 }
 
-.feature-item-special-view {
-  background-image: url("img/sedona_view.jpg");
+.feature-photo-1 {
+  background-image: url("../img/sedona_view.jpg");
   background-color: #81b3d2;
   background-repeat: no-repeat;
-  background-position: center right;
-  background-size: contain;
+  background-position: 0 0;
+  background-size: cover;
 }
 
-.feature-item-special-bridge {
-  background-image: url("img/bridge.jpg");
+.feature-photo-2 {
+  background-image: url("../img/bridge.jpg");
   background-color: #81b3d2;
   background-repeat: no-repeat;
-  background-position: center left;
-  background-size: contain;
+  background-position: 0 0;
+  background-size: cover;
 }
-
-
 
 
 .book-intro {
@@ -247,20 +248,55 @@ color: #ffffff;
   color: #000000;
 }
 
-
-.catalog,
-.main-footer,
- {
-  background-color: #ffffff;
-  box-shadow: 5px 0 15px rgba(0, 1, 1, 0.2);
+a #twitter,
+a #facebook,
+a #youtube {
+  fill: #ffffff;
 }
 
-.main-header,
-.container,
-.main-footer {
+.social-button {
+  background-color: #81b3d2;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
+
+a:active #twitter,
+a:active #facebook,
+a:active #youtube {
+  fill: #88b6d1;
+}
+
+a #htmlacademy {
+  fill: #000000;
+}
+
+#htmlacademy {
+  width: 115px;
+}
+
+a:hover #htmlacademy,
+a:focus #htmlacademy {
+  fill: #81b3d2;
+}
+
+a:active #htmlacademy {
+  fill: #bdbbbc;
+}
+
+.container {
   background-color: #ffffff;
   box-shadow: 5px 0  15px -10px rgba(0, 1, 1, 0.2);
 }
+
+
 
 /* catalog */
 
@@ -268,7 +304,7 @@ color: #ffffff;
   line-height: 21px;
   color: #ffffff;
 
-  background-image: url("img/bk-catalog.jpg");
+  background-image: url("../img/bk-catalog.jpg");
   background-color: #5986ae;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -289,8 +325,6 @@ legend {
   color: #ffffff;
   background: transparent;
 }
-
-
 
 .catalog p {
   font-size: 21px;
@@ -325,6 +359,18 @@ legend {
   border: none;
 }
 
+a #sorting {
+  fill: #bdbbbc;
+}
+a:hover #sorting,
+a:focus #sorting {
+  fill: #000000;
+}
+
+a:active #sorting {
+  fill: #81b3d2;
+}
+
 
 .hotel-list {
   text-align: left;
@@ -353,12 +399,49 @@ legend {
 
 .hotel-raiting,
 .hotel-stars {
-  text-align: right;
+  text-align: center;
 }
 
 .hotel-raiting {
   background-color: #f2f2f2;
 }
+
+.hotel-stars-villas {
+  background-image: url("../img/star.svg");
+  repeat: no-repeat;
+  background-size: 18px 17px;
+  background-position: top right;
+}
+
+.hotel-stars {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background-image: url("../img/star.svg");
+  background-size: 18px;
+  repeat: repeat;
+}
+
+.hotel-stars-1 {
+  width: 16px;
+}
+
+.hotel-stars-2 {
+  width: 34px;
+}
+
+.hotel-stars-3 {
+  width: 52px;
+}
+
+.hotel-stars-4 {
+  width: 70px;
+}
+
+.hotel-stars-5 {
+  width: 87px;
+}
+
 
 a:focus {
   outline: none;
