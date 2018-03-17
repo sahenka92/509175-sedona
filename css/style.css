@@ -90,8 +90,6 @@ a {
 
 .feature-item-special {
   color: #ffffff;
-
-  background-color: #81b3d2;
 }
 
 .feature-item-special h2 {
@@ -110,22 +108,23 @@ a {
   background-color:#ffffff;
 }
 
-.feature-image-bridge {
+.feature-item-special-view {
+  background-image: url("img/sedona_view.jpg");
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+}
+
+.feature-item-special-bridge {
   background-image: url("img/bridge.jpg");
-  background-color: #5986ae;
+  background-color: #81b3d2;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center left;
   background-size: contain;
 }
 
-.feature-image-view {
-  background-image: url("img/sedona-view.jpg");
-  background-color: #5986ae;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
 
-}
 
 
 .book-intro {
