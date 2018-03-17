@@ -60,8 +60,8 @@ a {
   background-repeat:
   no-repeat;
   background-size:
-  100% 57px,
-  cover;
+  1200px auto,
+  1200px auto;
   background-position:
   bottom center,
   top center;
