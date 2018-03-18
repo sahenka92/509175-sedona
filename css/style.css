@@ -406,40 +406,13 @@ a:active #sorting {
   background-color: #f2f2f2;
 }
 
-.hotel-stars-villas {
-  background-image: url("../img/star.svg");
-  repeat: no-repeat;
-  background-size: 18px 17px;
-  background-position: top right;
-}
-
-.hotel-stars {
+.stars {
   display: inline-block;
   width: 18px;
   height: 16px;
   background-image: url("../img/star.svg");
   background-size: 18px;
   repeat: repeat;
-}
-
-.hotel-stars-1 {
-  width: 16px;
-}
-
-.hotel-stars-2 {
-  width: 34px;
-}
-
-.hotel-stars-3 {
-  width: 52px;
-}
-
-.hotel-stars-4 {
-  width: 70px;
-}
-
-.hotel-stars-5 {
-  width: 87px;
 }
 
 
