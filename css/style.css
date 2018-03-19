@@ -1,7 +1,4 @@
 body {
-  min-width: 1280px;
-  min-height: 2762px;
-
   margin: 0;
   padding: 0;
 
@@ -29,20 +26,17 @@ a {
   box-shadow: 5px 0  15px -10px rgba(0, 1, 1, 0.2);
 }
 
+.content {
+  width: 1056px;
+  margin: 0 auto;
+}
+
 .main-header-logo {
   width: 138px;
   height: 70px;
-
-/* Временно для сетки */
-  outline: 1px solid orange;
 }
 
 .main-navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -54,18 +48,13 @@ a {
 .site-navigation {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   width: 100%;
   margin-top: -85px;
-  margin-left: 73px;
-  margin-right: 73px;
   padding: 21px 0;
 
   list-style: none;
-
-  /* Временно для сетки */
-  min-height: 14px;
-  outline: 1px solid red;
 }
 
 .site-navigation li {
@@ -120,16 +109,6 @@ a {
   background-position:
   center 451px,
   top center;
-
-  /* Временно для сетки */
-  min-height: 508px;
-  outline: 1px solid violet;
-}
-
-.intro {
-  /* Временно для сетки */
-  min-height: 688px;
-  outline: 1px solid green;
 }
 
 .intro-theme img {
@@ -140,10 +119,6 @@ a {
   width: 490px;
   margin-bottom: 58px;
   padding: 0 355px;
-
-  /* Временно для сетки */
-  min-height: 209px;
-  outline: 1px solid black;
 }
 
 b.intro-tagline {
@@ -156,12 +131,6 @@ b.intro-tagline {
   list-style: none;
 }
 
-.features {
-  /* Временно для сетки */
-  min-height: 74px;
-  outline: 1px solid yellow;
-}
-
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -172,14 +141,10 @@ b.intro-tagline {
   background-color: #eeeeee;
 }
 
-.box-feature-item {
+.box-item {
   width: 400px;
   padding-top: 48px;
   padding-bottom: 62px;
-
-  /* Временно для сетки */
-  min-height: 146px;
-  outline: 1px solid brown;
 }
 
 .features-list h2,
@@ -210,10 +175,6 @@ b.intro-tagline {
   color: #ffffff;
 
   background-color: #81b3d2;
-
-  /* Временно для сетки */
-  min-height: 146px;
-  outline: 1px solid blue;
 }
 
 .line-feature-item h2 {
@@ -229,10 +190,6 @@ b.intro-tagline {
 .feature-photo {
   display: inline-block;
   width: 800px;
-
-  /* Временно для сетки */
-  min-height: 146px;
-  outline: 2px solid grey;
 }
 
 .feature-photo-1 {
@@ -255,42 +212,21 @@ b.intro-tagline {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  width: 1200px;
-  padding: 163px 0 87px 0px;
+  padding: 0;
 
   background-color:#ffffff;
-
-  /* Временно для сетки */
-  min-height: 80px;
-  outline: 1px solid #1fe9b2;
 }
+
 
 .book {
-  width: 100%;
-  /* Временно для сетки */
-  min-height: 831px;
-  outline: 1px solid #3e3157;
-}
-
-.book-search {
-  width: 568px;
-  margin: 0 315px;
-  /* Временно для сетки */
-  min-height: 484px;
-  outline: 1px solid #766357;
-}
-
-.map {
-  width: 100%px;
-  margin-top: -396px;
-  /* Временно для сетки */
-  min-height: 474px;
-  outline: 1px solid #cedead;
+  width: 1200;
 }
 
 .book-intro {
   font-size: 14px;
   line-height: 24px;
+
+  margin-bottom: 40px;
 }
 
 .book-intro h2 {
@@ -298,6 +234,29 @@ b.intro-tagline {
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+}
+
+.book-search {
+  width: 568px;
+  margin: 0 315px;
+
+  position: absolute;
+  z-index: 10;
+
+  background: #ffffff;
+  background-size: 481px;
+
+  /** Временно для сетки **/
+  min-height: 440px;
+}
+
+
+
+.map {
+  margin-top: 87px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: -125px;
 }
 
 .button {
@@ -310,10 +269,10 @@ b.intro-tagline {
 
 .button-search-form,
 .button-show {
-font-size: 21px;
-line-height: 26px;
-font-weight: 700;
-color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .button-book,
@@ -389,9 +348,10 @@ color: #ffffff;
 }
 
 .main-footer {
-  display: flex;
-  align-items: center;
-  margin-top: -120px;
+  position: absolute;
+  z-index: 1;
+
+  width: 1200px;
 
   font-size: 21px;
   line-height: 26px;
@@ -400,29 +360,27 @@ color: #ffffff;
   text-transform: uppercase;
 
   background-color: #ffffff;
-
-  /* Временно для сетки */
-  min-height: 85px;
-  outline: 1px solid #641273;
 }
 
-.main-footer p {
+.main-footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+  .main-footer p {
   width: 400px;
-  /* Временно для сетки */
-  outline: 1px solid #ffcccc;
 }
 
 .footer-social {
   width: 46px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   padding: 0;
   width: 400px;
   list-style: none;
-
-  /* Временно для сетки */
-  min-height: 48px;
-  outline: 1px solid #484e16;
 }
 
 .main-footer a {
@@ -438,7 +396,6 @@ a #youtube {
 }
 
 .social-button {
-  width: 46px;
   background-color: #81b3d2;
 }
 
@@ -460,9 +417,6 @@ a:active #youtube {
 
 .main-footer-logo {
   width: 400px;
-  /* Временно для сетки */
-  min-height: 41px;
-  outline: 1px solid #d41030;
 }
 
 a #htmlacademy {
@@ -486,24 +440,90 @@ a:active #htmlacademy {
 
 /* catalog */
 
-.filter-form {
-  line-height: 21px;
-  color: #ffffff;
+.filters {
+  width: 1200px;
 
   background-image: url("../img/bk-catalog.jpg");
   background-color: #5986ae;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+
+  /* Временно для сетки */
+  min-height: 218px;
+  outline: 1px solid red;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filters .content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+
+  /* Временно для сетки */
+  min-height: 217px;
+  outline: 1px solid yellow;
+}
+
+.filter-form {
+  line-height: 21px;
+  color: #ffffff;
 }
 
 .filter-list {
+  padding: 0 39px;
+
   list-style: none;
 }
 
-legend {
-  font-size: 16px;
-  font-weight: 700;
+.filter-list li {
+  padding: 18px 0;
+}
+
+.filter-infrastructure {
+  width: 241px;
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+
+  /* Временно для сетки */
+  min-height: 217px;
+  outline: 1px solid black;
+}
+
+.filter-type-hotel {
+  width: 288px;
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+
+  /* Временно для сетки */
+  min-height: 217px;
+  outline: 1px solid brown;
+}
+
+.price-button {
+  width: 328px;
+  padding-right: 0;
+  margin-left: 199px;
+
+  text-align: center;
+
+  /* Временно для сетки */
+  min-height: 217px;
+  outline: 1px solid blue;
 }
 
 .filter-show {
@@ -512,20 +532,65 @@ legend {
   background: transparent;
 }
 
+
+
+.catalog-sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Временно для сетки */
+  min-height: 86px;
+  outline: 1px solid violet;
+}
+
+.catalog-sorting p {
+  width:
+}
+
+.sorting {
+  display: flex;
+  margin-left: -400px;
+
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  font-size: 12px;
+  line-height: 18px;
+
+  /* Временно для сетки */
+  min-height: 86px;
+  outline: 1px solid green;
+}
+
+.sorting h3 {
+  width: 135px;
+}
+
+.sorting-list {
+  width: 288px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  /* Временно для сетки */
+  min-height: 86px;
+  outline: 1px solid black;
+}
+
+
 .catalog p {
+  text-align: left;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-}
-
-.sorting {
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.sorting-list {
-  list-style: none;
 }
 
 .sorting a {
@@ -559,15 +624,39 @@ a:active #sorting {
 
 
 .hotel-list {
+  width: 1056px;
+  margin: 0 auto;
+
   text-align: left;
+
+  /* Временно для сетки */
+  min-height: 250px;
+  outline: 1px solid brown;
+}
+
+.hotel-photo {
+  width: 135px;
+
+
+  /* Временно для сетки */
+  min-height: 90px;
+  outline: 1px solid green;
 }
 
 .hotel-name {
+  width: 681px;
+  padding-left: 33px;
+  height: 10px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-align: left;
+
+  /* Временно для сетки */
+  min-height: 15px;
+  outline: 1px solid yellow;
 }
 
 .hotel-name a {
@@ -583,13 +672,68 @@ a:active #sorting {
   color: #ebebeb;
 }
 
-.hotel-raiting,
-.hotel-stars {
-  text-align: center;
+.first-column {
+  width: 111px;
+
+  /* Временно для сетки */
+  min-height: 25px;
+  outline: 1px solid pink;
 }
 
+.second-column {
+  width: 535px;
+
+  /* Временно для сетки */
+  min-height: 25px;
+  outline: 1px solid black;
+}
+
+.type {
+  padding-left: 30px;
+}
+
+.button-more {
+  margin-left: 30px;
+}
+
+.hotel-list .button {
+  padding: 4px 8px;
+
+}
+
+
 .hotel-raiting {
+  width: 241px;
+  padding-left: 33px;
+
+  /* Временно для сетки */
+  min-height: 54px;
+  outline: 1px solid red;
+}
+
+.raiting {
   background-color: #f2f2f2;
+  background-size: 111px 27px;
+  background-position: right center;
+  margin-left: 130px;
+
+  text-align: center;
+
+  /* Временно для сетки */
+  min-height: 27px;
+  outline: 1px solid blue;
+}
+
+.hotel-stars {
+  width: 241px;
+  padding-left: 33px;
+
+  text-align: right;
+  vertical-align: top;
+
+  /* Временно для сетки */
+  min-height: 94px;
+  outline: 1px solid red;
 }
 
 .stars {
@@ -598,9 +742,8 @@ a:active #sorting {
   height: 16px;
   background-image: url("../img/star.svg");
   background-size: 18px;
-  repeat: repeat;
+  background-repeat: repeat;
 }
-
 
 a:focus {
   outline: none;
