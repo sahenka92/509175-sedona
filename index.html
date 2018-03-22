@@ -15,6 +15,7 @@
 
     <header class="main-header">
       <div class="content">
+        <div class="main-header-wrapper">
         <a class="main-header-logo" aria-label="Седона">
           <img src="img/logo.png" width="138" height="70" aria-hidden="true" alt="Логотип Седоны">
         </a>
@@ -27,6 +28,7 @@
             <li><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
+      </div>
       </div>
     </header>
 
@@ -59,21 +61,21 @@
             <ul class="service-list">
               <li class="service-item">
                 <div class="box-item box-service-item">
-                  <span class="service-icon service-icon-house"></span>
+                  <div class="service-icon service-icon-house"></span>
                   <h3>Жилье</h3>
                   <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </div>
               </li>
               <li class="service-item">
                 <div class="box-item box-service-item">
-                  <span class="service-icon service-icon-food"></span>
+                  <div class="service-icon service-icon-food"></span>
                   <h3>Еда</h3>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </div>
               </li>
               <li class="service-item">
                 <div class="box-item box-service-item">
-                  <span class="service-icon service-icon-souvenirs"></span>
+                  <div class="service-icon service-icon-souvenirs"></span>
                   <h3>Сувениры</h3>
                   <p>Не только китайского, но и местного производства!</p>
                 </div>
@@ -122,27 +124,28 @@
         <div class="book-intro">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <div class="book-search">
+            <button class="button button-search-form">Поиск гостиницы в Седоне</button>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <p class="search-item">
+                <label for="search-datein">Дата заезда:</label>
+                <input id="search-datein" type="date" name="datein" value="2014-04-24">
+              </p>
+              <p class="search-item">
+                <label for="search-dateout">Дата выезда:</label>
+                <input id="search-dateout" type="date" name="dateout" value="2014-07-06">
+              </p>
+              <p class="search-item">
+                <label for="search-adult">Взрослые:</label>
+                <input id="search-adult" type="number" name="adult" value="2">
+                <label for="search-child">Дети:</label>
+                <input id="search-child" type="number" name="child" value="0">
+              </p>
+              <button class="button button-show" type="submit">Найти</button>
+            </form>
+          </div>
         </div>
-        <div class="book-search">
-          <button class="button button-search-form">Поиск гостиницы в Седоне</button>
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <p class="search-item">
-              <label for="search-datein">Дата заезда:</label>
-              <input id="search-datein" type="date" name="datein" value="2014-04-24">
-            </p>
-            <p class="search-item">
-              <label for="search-dateout">Дата выезда:</label>
-              <input id="search-dateout" type="date" name="dateout" value="2014-07-06">
-            </p>
-            <p class="search-item">
-              <label for="search-adult">Взрослые:</label>
-              <input id="search-adult" type="number" name="adult" value="2">
-              <label for="search-child">Дети:</label>
-              <input id="search-child" type="number" name="child" value="0">
-            </p>
-            <button class="button button-show" type="submit">Найти</button>
-          </form>
-        </div>
+
         <div class="map"><img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны"></div>
       </section>
 
