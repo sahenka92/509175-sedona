@@ -17,6 +17,7 @@ a {
 }
 
 .container {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -74,11 +75,11 @@ a {
 }
 
 .site-navigation li:nth-child(2) {
-  margin-right: 45px;
+  margin-right: auto;
 }
 
 .site-navigation li:nth-child(3) {
-  margin-left: 45px;
+  margin-left: auto;
 }
 
 .site-navigation li:nth-child(3),
@@ -275,7 +276,10 @@ b.intro-tagline {
   width: 100%;
   padding: 0;
   margin-top: 85px;
-  margin-bottom: -125px;
+}
+
+.map img {
+  display: block;
 }
 
 .button {
@@ -368,10 +372,9 @@ b.intro-tagline {
 
 
 .main-footer {
-  position: relative;
-  z-index: 2;
   margin: 0;
   padding: 36px 0;
+  width: 100%;
 
   font-size: 21px;
   line-height: 26px;
@@ -379,10 +382,13 @@ b.intro-tagline {
   color: #000000;
   text-transform: uppercase;
 
-  background-color: #ffffff;
-  x-index: 3;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
-  outline: 1px solid red;
+.main-footer-index-page {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-100%);
 }
 
 .main-footer .content {
