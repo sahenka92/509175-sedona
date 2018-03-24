@@ -638,20 +638,23 @@ a:active #youtube {
 }
 
 .main-footer-logo {
-  margin-left: 88px;
-}
-
-.main-footer-logo a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: 25px;
 }
 
 .main-footer-logo p {
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
   padding-right: 7px;
   width: 75px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
 }
 
 a #htmlacademy {
@@ -852,6 +855,10 @@ a:active #htmlacademy {
   margin-left: auto;
 }
 
+.sorting-down {
+  padding-right: 10px;
+}
+
 .sorting a {
   color: #cacaca;
   border-bottom: 1px dashed #81b3d2;
@@ -877,7 +884,8 @@ a:focus #sorting {
   fill: #000000;
 }
 
-a:active #sorting {
+a:active #sorting,
+a.sorting-up #sorting {
   fill: #81b3d2;
 }
 
@@ -897,7 +905,7 @@ a:active #sorting {
 
 .hotel-item-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   padding: 30px 0;
 }
@@ -913,18 +921,18 @@ a:active #sorting {
   display: block;
 }
 
-
 .hotel-info {
-  diplay: flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 
+}
 
 .hotel-name {
   margin: 0;
   padding: 0;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -933,6 +941,8 @@ a:active #sorting {
 }
 
 .hotel-info h3 {
+  max-width: 560px;
+
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
@@ -947,18 +957,10 @@ a:active #sorting {
   color: #ebebeb;
 }
 
-.type-price {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  justify-content: space-between;
-}
-
 p.type-hotel,
 p.price-hotel {
   margin: 0;
+  margin-bottom: 10px;
   margin-right: 5px;
   padding: 0;
 
@@ -969,6 +971,22 @@ p.price-hotel {
   font-weight: 400;
   color: #333333;
   text-align: left;
+}
+
+.hotel-info-wrapper {
+  display: flex;
+  margin-right: auto;
+  margin-bottom: auto;
+  justify-content: space-between;
+}
+
+.column-1,
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding-right: 3px;
 }
 
 p.price-hotel {
@@ -990,6 +1008,7 @@ p.price-hotel {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-shrink: 0;
   align-items: flex-end;
 
   margin-left: auto;
