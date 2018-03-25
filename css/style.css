@@ -119,9 +119,12 @@ input[type="checkbox"].visually-hidden {
   outline: none;
 }
 
-.site-navigation a:active,
-.site-navigation a.hotels {
+.site-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.page-current {
+  color: #766357;
 }
 
 .intro {
@@ -302,7 +305,7 @@ b.intro-tagline {
 }
 
 .book {
-  width: 1200;
+  width: 1200px;
 
   text-align: center;
 }
@@ -423,14 +426,14 @@ p.search-item-child {
   padding: 10px 12px;
 }
 
-
-
 .search-item .calendar {
   position: absolute;
   top: 7px;
   right: 7px;
 
   fill: #cacaca;
+
+  cursor: pointer;
 }
 
 .search-item .calendar:hover,
@@ -474,8 +477,6 @@ p.search-item-child {
   margin-bottom: 55px;
 }
 
-
-
 .map {
   width: 100%;
   padding: 0;
@@ -494,6 +495,8 @@ p.search-item-child {
 
   background-color: #766357;
   border: none;
+
+  cursor: pointer;
 }
 
 .button-search-form,
@@ -648,13 +651,16 @@ a:active #youtube {
 .main-footer-logo p {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
   padding-right: 7px;
   width: 75px;
 
   font-size: 14px;
   font-weight: 400;
   color: #000000;
+}
+
+.main-footer-logo a {
+  line-height: 0;
 }
 
 a #htmlacademy {
@@ -699,7 +705,7 @@ a:active #htmlacademy {
   font-size: 16px;
   font-weight: 700;
 
-  margin-bottom: 25px;
+  margin-bottom: 25px;;
 }
 
 .filter-form-wrapper {
@@ -753,7 +759,6 @@ a:active #htmlacademy {
   user-select: none;
 }
 
-
 .filter-input-checkbox:not(:checked) + label::before {
   content: "";
   position: absolute;
@@ -783,23 +788,150 @@ a:active #htmlacademy {
   background-position: 0 0;
 }
 
-.price-button {
+.filter-price-button {
   padding: 0;
   margin-left: auto;
 
-  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-price {
+  width: 320px;
+  padding: 0;
+  padding-left: 11px;
+  margin: 0;
+}
+
+.filter-price legend {
+  margin-bottom: 9px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 30px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
 }
 
 .filter-show {
-  border: 2px solid #ffffff;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
   background: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-show:hover {
+  color: #000000;
+
+  background: #ffffff;
+
+  outline: none;
 }
 
 .catalog-sorting {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 23px 0;
 }
 
 .catalog p {
@@ -817,6 +949,7 @@ a:active #htmlacademy {
 
 .sorting {
   display: flex;
+  margin: 0;
   padding: 0;
 
   justify-content: flex-start;
@@ -842,7 +975,6 @@ a:active #htmlacademy {
   flex-wrap: wrap;
 
   margin: 0 auto;
-  padding: 30px 0;
 
   list-style: none;
 }
@@ -865,8 +997,7 @@ a:active #htmlacademy {
 }
 
 .sorting a:hover,
-.sorting a:focus,
-.sorting-list a.sorting-by-price {
+.sorting a:focus {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
@@ -874,6 +1005,11 @@ a:active #htmlacademy {
 .sorting a:active {
   color: #000000;
   border: none;
+}
+
+.sorting-current {
+  color: #81b3d2;
+  border-bottom: 1px dashed #81b3d2;
 }
 
 a #sorting {
@@ -884,8 +1020,11 @@ a:focus #sorting {
   fill: #000000;
 }
 
-a:active #sorting,
-a.sorting-up #sorting {
+a:active #sorting {
+  fill: #81b3d2;
+}
+
+.sorting-button-current {
   fill: #81b3d2;
 }
 
@@ -907,7 +1046,9 @@ a.sorting-up #sorting {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  padding: 30px 0;
+  padding: 0;
+  padding-bottom: 30px;
+  padding-top: 25px;
 }
 
 .hotel-photo {
