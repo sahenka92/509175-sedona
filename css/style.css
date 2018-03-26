@@ -91,21 +91,21 @@ input[type="checkbox"].visually-hidden {
   width: 240px;
 }
 
-.site-navigation li:nth-child(1),
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(4n+1),
+.site-navigation li:nth-child(4n+2) {
   text-align: left;
 }
 
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(4n+2) {
   margin-right: auto;
 }
 
-.site-navigation li:nth-child(3) {
+.site-navigation li:nth-child(4n+3) {
   margin-left: auto;
 }
 
-.site-navigation li:nth-child(3),
-.site-navigation li:nth-child(4) {
+.site-navigation li:nth-child(4n+3),
+.site-navigation li:nth-child(4n+4) {
   text-align: right;
 }
 
@@ -123,7 +123,7 @@ input[type="checkbox"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.page-current {
+.page-current a {
   color: #766357;
 }
 
@@ -160,9 +160,10 @@ input[type="checkbox"].visually-hidden {
 
 .intro-text {
   padding: 0px;
-  width: 490px;
+  width: 576px;
   margin-bottom: 20px;
-  padding: 0 355px;
+  padding: 0 310px;
+
 }
 
 .intro-text p {
@@ -351,12 +352,12 @@ b.intro-tagline {
   width: 100%;
   padding: 30px 84px;
   margin: 0;
-  margin-bottom: 55px;
 }
 
 .search-form {
   width: 460px;
   margin: 0 auto;
+  margin-top: 55px;
 
   font-size: 14px;
   line-height: 26px;
@@ -417,8 +418,8 @@ p.search-item-child {
 
 .btn-number {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   padding: 0;
   margin: 0;
 
@@ -452,11 +453,11 @@ p.search-item-child {
 }
 
 .dateout-title {
-  padding-right: 17px;
+  padding-right: 16px;
 }
 
 .datein-title {
-  padding-right: 21px;
+  padding-right: 19px;
 }
 
 .search-item-adult label {
@@ -476,12 +477,20 @@ p.search-item-child {
   border: none;
 
   padding: 10px 12px;
+  height: 38px;
 }
 
 .search-item .calendar {
   position: absolute;
-  top: 7px;
-  right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+
+  background-color: #f2f2f2;
+  top: 2px;
+  right: 2px;
 
   fill: #cacaca;
 
@@ -508,8 +517,7 @@ p.search-item-child {
   padding: 14px 18px;
 }
 
-.search-form input:hover,
- {
+.search-form input:hover {
   background-color: #ebebeb;
   outline: none;
 }
@@ -518,6 +526,15 @@ p.search-item-child {
   background-color: #ffffff;
   outline: 1px solid #ebebeb;
 }
+
+.search-date:focus + .calendar {
+  background-color: #ffffff;
+}
+
+.search-date:hover + .calendar {
+  background-color: #ebebeb;
+}
+
 
 .button-show {
   width: 100%;
@@ -602,6 +619,7 @@ p.search-item-child {
 .main-footer {
   margin: 0;
   padding: 36px 0;
+
   width: 100%;
 
   font-size: 21px;
@@ -630,7 +648,6 @@ p.search-item-child {
   margin: 0;
   margin-right: 88px;
   width: 180px;
-
 }
 
 .footer-social {
@@ -708,6 +725,10 @@ a:active #youtube {
 
 .main-footer-logo a {
   line-height: 0;
+}
+
+.main-footer-logo svg {
+  height: 45px;
 }
 
 a #htmlacademy {
@@ -900,6 +921,7 @@ a:active #htmlacademy {
 
   color: inherit;
   font: inherit;
+  line-height: 21px;
 
   background: none;
   border: none;
@@ -978,7 +1000,7 @@ a:active #htmlacademy {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 23px 0;
+  padding: 30px 0;
 }
 
 .catalog p {
@@ -1009,6 +1031,7 @@ a:active #htmlacademy {
 }
 
 .sorting h3 {
+  margin: 0;
   margin-right: 40px;
 
   font-size: 12px;
@@ -1022,6 +1045,7 @@ a:active #htmlacademy {
   flex-wrap: wrap;
 
   margin: 0 auto;
+  padding: 0;
 
   list-style: none;
 }
@@ -1059,15 +1083,19 @@ a:active #htmlacademy {
   border-bottom: 1px dashed #81b3d2;
 }
 
-a #sorting {
+a #sorting-down,
+a #sorting-up {
   fill: #bdbbbc;
 }
-a:hover #sorting,
-a:focus #sorting {
+a:hover #sorting-down,
+a:hover #sorting-up,
+a:focus #sorting-down,
+a:hover #sorting-up {
   fill: #000000;
 }
 
-a:active #sorting {
+a:active #sorting-down,
+a:active #sorting-up {
   fill: #81b3d2;
 }
 
