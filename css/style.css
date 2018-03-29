@@ -435,7 +435,9 @@ input[type="text"]::-ms-clear {
   fill: #000000;
 }
 
-.search-item .calendar:active {
+.search-item .calendar:active,
+/** IE hack **/
+.calendar-date:active path {
   fill: #81b3d2;
 }
 
@@ -629,6 +631,8 @@ input[type="text"]::-ms-clear {
   width: 240px;
   margin: 0;
   margin-right: auto;
+
+  word-break: break-word;
 }
 
 .footer-social {
@@ -683,10 +687,11 @@ a .social-icon {
 
 .social-button:active {
   background-color: #5496bd;
-  color: #88b6d1;
 }
 
-a:active .social-icon {
+a:active .social-icon,
+/** IE hack **/
+.social-icon:active path {
   fill: #88b6d1;
 }
 
@@ -728,7 +733,9 @@ a:focus .logo-htmlacademy {
   fill: #81b3d2;
 }
 
-a:active .logo-htmlacademy {
+a:active .logo-htmlacademy,
+/** IE hack **/
+.logo-htmlacademy:active path {
   fill: #bdbbbc;
 }
 
@@ -1114,7 +1121,9 @@ a:focus .sorting-arrow {
   fill: #000000;
 }
 
-a:active .sorting-arrow {
+a:active .sorting-arrow,
+/** IE hack **/
+.sorting-arrow:active path {
   fill: #81b3d2;
 }
 
