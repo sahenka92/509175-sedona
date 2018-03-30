@@ -359,6 +359,8 @@ b.intro-slogan {
 }
 
 .search-form {
+  display: none;
+
   width: 460px;
   margin: 0 auto;
   margin-top: 55px;
@@ -601,6 +603,10 @@ input[type="text"]::-ms-clear {
 }
 
 .main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   margin: 0;
   padding: 36px 0;
@@ -621,16 +627,12 @@ input[type="text"]::-ms-clear {
   z-index: 2;
 }
 
-.main-footer .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.main-footer .col {
+  width: 400px;
 }
 
 .main-footer p {
-  width: 240px;
   margin: 0;
-  margin-right: auto;
 
   word-break: break-word;
 }
@@ -640,8 +642,7 @@ input[type="text"]::-ms-clear {
   flex-wrap: wrap;
   justify-content: space-around;
 
-  width: 400px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -700,8 +701,7 @@ a:active .social-icon,
   align-items: center;
   justify-content: center;
 
-  width: 240px;
-  margin-left: auto;
+  margin: 0;
 }
 
 .main-footer-logo p {
@@ -1069,7 +1069,6 @@ a:active .logo-htmlacademy,
 
 .sorting-list {
   display: flex;
-  justify-content: space-around;
   align-items: baseline;
   flex-wrap: wrap;
 
@@ -1105,6 +1104,8 @@ a:active .logo-htmlacademy,
 }
 
 .sorting-button {
+  display: flex;
+  align-items: baseline;
   margin-left: auto;
 }
 
@@ -1152,7 +1153,7 @@ a:active .sorting-arrow,
   justify-content: space-around;
 
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-top: 25px;
 }
 
@@ -1219,7 +1220,8 @@ p.price-hotel {
 
 .hotel-info-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
   margin-right: auto;
   margin-bottom: auto;
@@ -1246,6 +1248,7 @@ p.price-hotel {
 .hotel-list .button {
   display: inline-block;
   margin: 0;
+  margin-bottom: 10px;
   margin-right: 3px;
   padding: 3px 15px;
 
