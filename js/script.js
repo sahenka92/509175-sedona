@@ -14,6 +14,7 @@ btn.addEventListener("click", function(evt) {
 form.addEventListener("submit", function (evt) {
   if (!datein.value || !dateout.value || !adult.value || !child.value) {
     evt.preventDefault();
+    form.classList.add("search-form-error");
     console.log("Нужно внести данные для поиска");
   }
 })
