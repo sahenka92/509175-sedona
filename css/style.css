@@ -359,11 +359,8 @@ b.intro-slogan {
 }
 
 .search-form {
-  display: none;
-
   width: 460px;
   margin: 0 auto;
-  margin-top: 55px;
 
   font-size: 14px;
   line-height: 26px;
@@ -371,13 +368,39 @@ b.intro-slogan {
   color: #000000;
 }
 
-.open-search-form {
+.js .search-form {
+  display: none;
+}
+
+.js .open-search-form {
   display: block;
+
+  animation-name: opening;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes opening {
+  0% {
+    overflow-y: hidden;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+
+  100% {
+    overflow-y: hidden;
+    height: 395px;
+  }
 }
 
 .search-item {
   margin: 0;
   margin-bottom: 30px;
+}
+
+.search-form p:first-child {
+  padding-top: 55px;
 }
 
 .search-item label {
