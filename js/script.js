@@ -6,10 +6,9 @@ var dateout = form.querySelector("[name=dateout]");
 var adult = form.querySelector("[name=adult]");
 var child = form.querySelector("[name=child]");
 
-
 btn.addEventListener("click", function(evt) {
-evt.preventDefault( );
-form.classList.toggle("open-search-form");
+  evt.preventDefault( );
+  form.classList.toggle("open-search-form");
 })
 
 form.addEventListener("submit", function (evt) {
@@ -17,4 +16,4 @@ form.addEventListener("submit", function (evt) {
     evt.preventDefault();
     console.log("Нужно внести данные для поиска");
   }
-});
+})
