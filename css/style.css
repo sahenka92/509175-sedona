@@ -632,7 +632,9 @@ input[type="text"]::-ms-clear {
 
   width: 100%;
   margin: 0;
-  padding: 36px 0;
+  padding: 0;
+  padding-top: 36px;
+  padding-bottom: 31px;
 
   font-size: 21px;
   line-height: 26px;
@@ -663,23 +665,16 @@ input[type="text"]::-ms-clear {
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
 }
 
-.footer-social li:first-child {
-  margin-left: auto;
-}
-
-.footer-social li:last-child {
-  margin-right: auto;
-}
-
 .footer-social li {
+  padding-bottom: 5px;
   padding-right: 5px;
 }
 
