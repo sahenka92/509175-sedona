@@ -1045,7 +1045,7 @@ a:active .logo-htmlacademy,
 }
 
 .filter-price {
-  width: 320px;
+  width: 318px;
   margin: 0;
   padding: 0;
   padding-left: 10px;
@@ -1053,14 +1053,14 @@ a:active .logo-htmlacademy,
 
 .filter-price legend {
   margin-bottom: 9px;
-  padding-left: 5px;
+  padding-left: 2px;
 }
 
 .price-controls {
   position: relative;
 
-  height: 35px;
-  margin-bottom: 18px;
+  height: 33px;
+  margin-bottom: 20px;
 
   font-size: 0;
 
@@ -1096,8 +1096,8 @@ a:active .logo-htmlacademy,
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 80px;
-  padding-left: 67px;
+  width: 81px;
+  padding-left: 65px;
 }
 
 .price-controls input {
@@ -1134,9 +1134,9 @@ a:active .logo-htmlacademy,
 
 .range-toggle {
   position: absolute;
-  top: -10px;
-  width: 5px;
-  height: 5px;
+  top: -9px;
+  width: 4px;
+  height: 4px;
 
   background: #ababab;
   border: 8px solid #ffffff;
@@ -1150,11 +1150,11 @@ a:active .logo-htmlacademy,
 }
 
 .range-toggle-min {
-  left: 0;
+  left: 0%;
 }
 
 .range-toggle-max {
-  right: 20%;
+  right: 14%;
 }
 
 .filter-show {
